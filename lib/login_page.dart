@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:food_app/home_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool isPassHidden = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +63,10 @@ class _LoginPageState extends State<LoginPage> {
                       child: TextField(
                         keyboardType: TextInputType.name,
                         decoration: InputDecoration(
-                            border: OutlineInputBorder(), hintText: "Username"),
+                            prefixIcon: Icon(Icons.mail_outline),
+                            border: OutlineInputBorder(),
+                            labelText: "Username",
+                            hintText: "Username"),
                         obscureText: false,
                       ),
                     ),
@@ -74,7 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                       child: TextField(
                         keyboardType: TextInputType.name,
                         decoration: InputDecoration(
+                            // suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye_outlined)),
+
                             border: OutlineInputBorder(),
+                            labelText: "Password",
                             hintText: "Enter your password"),
                         obscureText: false,
                       ),
