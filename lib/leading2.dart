@@ -20,6 +20,7 @@ class Leading_two extends StatelessWidget {
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         SafeArea(
           child: SizedBox(
+            height: 900,
             child: Row(
               children: [
                 Container(
